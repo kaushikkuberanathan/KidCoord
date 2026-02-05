@@ -14,11 +14,19 @@ import dotenv from 'dotenv';
 import { logger, createRequestLogger } from '@/utils/logger';
 import { testConnection } from '@/utils/database';
 import { idempotency } from '@/middleware/idempotency';
+import { authenticate } from '@/middleware/auth';
 import { StateTransitionError } from '@/utils/stateMachine';
 
 // Import routes
 import needsRouter from '@/routes/needs';
 import availabilitiesRouter from '@/routes/availabilities';
+import offerRequestsRouter from '@/routes/offer-requests';
+import rideSessionsRouter from '@/routes/ride-sessions';
+import authRouter from '@/routes/auth';
+import householdsRouter from '@/routes/households';
+import childrenRouter from '@/routes/children';
+import vehiclesRouter from '@/routes/vehicles';
+import blocklistsRouter from '@/routes/blocklists';
 
 // Load environment variables
 dotenv.config();
@@ -92,8 +100,20 @@ app.get('/health', async (req, res) => {
 });
 
 // API routes
-app.use('/api/v2/needs', idempotency, needsRouter);
-app.use('/api/v2/availability', idempotency, availabilitiesRouter);
+// Auth routes (no authentication required)
+app.use('/api/v2/auth', authRouter);
+
+// Protected routes (require authentication)
+app.use('/api/v2/needs', authenticate, idempotency, needsRouter);
+app.use('/api/v2/availability', authenticate, idempotency, availabilitiesRouter);
+app.use('/api/v2/offer-requests', authenticate, idempotency, offerRequestsRouter);
+app.use('/api/v2/ride-sessions', authenticate, idempotency, rideSessionsRouter);
+
+// User registration routes (require authentication)
+app.use('/api/v2/households', authenticate, householdsRouter);
+app.use('/api/v2/children', authenticate, childrenRouter);
+app.use('/api/v2/vehicles', authenticate, vehiclesRouter);
+app.use('/api/v2/blocklists', authenticate, blocklistsRouter);
 
 // 404 handler
 app.use((req, res) => {
