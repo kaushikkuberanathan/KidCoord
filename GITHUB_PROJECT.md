@@ -192,7 +192,7 @@ Create these labels in your repository:
 
 **Type:**
 - `backend` - Backend API changes
-- `frontend` - Mobile app changes
+- `frontend` - Mobile app changes on the locked native React Native 0.73 client (`docs/CLIENT_SHELL.md`)
 - `database` - Schema changes
 - `docs` - Documentation only
 

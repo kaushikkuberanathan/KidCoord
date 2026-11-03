@@ -93,6 +93,15 @@ Pull requests require:
 
 ## Architecture Guidelines
 
+### Client shell
+
+The client shell is locked. See [docs/CLIENT_SHELL.md](./docs/CLIENT_SHELL.md).
+
+- Stay on the existing fully native React Native 0.73 app.
+- Do not add a hybrid WebView shell.
+- Do not treat a PWA or Add-to-Home-Screen page as the handoff system of record.
+- Feature work stays parked until Cos un-parks. A docs or code change that starts a feature dig is out of scope.
+
 ### State Machines
 - Always validate transitions
 - Use utilities in `utils/stateMachine.ts`

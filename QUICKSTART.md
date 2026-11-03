@@ -4,7 +4,9 @@ Welcome to the KidCoord School Drop-Off Manager MVP codebase! This guide will ge
 
 ## 🎯 What You Have
 
-A complete React Native TypeScript mobile app with:
+A React Native 0.73 TypeScript mobile app. That native client is the locked shell (see [docs/CLIENT_SHELL.md](./docs/CLIENT_SHELL.md)). A hybrid WebView shell is rejected. A PWA is not the handoff system of record. Feature work stays parked.
+
+The app includes:
 - **Full architecture** aligned to the KidCoord coordination framework
 - **Core screens**: Morning Dashboard, Profile with Care Credits
 - **Type-safe** domain models and API contracts
