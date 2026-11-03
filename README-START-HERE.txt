@@ -144,7 +144,7 @@ kidcoord/
 │   │   └── utils/       ← State machines, DB
 │   └── README.md        ← Backend setup guide
 │
-├── src/                  ← Mobile app (React Native)
+├── src/                  ← Mobile app (native React Native 0.73, locked shell)
 │   ├── components/      ← UI components
 │   ├── screens/         ← App screens
 │   └── store/           ← State management
@@ -152,8 +152,11 @@ kidcoord/
 └── docs/                 ← Documentation
     ├── API_V2.md        ← Complete API spec
     ├── ARCHITECTURE.md  ← System design
+    ├── CLIENT_SHELL.md  ← Native React Native shell lock
     └── ...
 ```
+
+The mobile client is fully native React Native 0.73. A hybrid WebView shell is rejected. A PWA or Add-to-Home-Screen page is not the handoff system of record. Feature work stays parked. See `docs/CLIENT_SHELL.md`.
 
 ---
 

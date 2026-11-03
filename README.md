@@ -2,9 +2,19 @@
 
 **Version:** 2.0.0  
 **Architecture:** Event-driven, Idempotent, Audit-first  
-**Status:** Foundation Complete, Backend Started
+**Status:** Foundation Complete, Backend Started. Feature work is parked.
 
 > A mobile and API platform designed to simplify daily logistics for families. The MVP focuses on morning school drop-off coordination with Care Credits to recognize community contribution.
+
+## Client shell (locked)
+
+Cos locked the client shell on November 2, 2026, about 7:29 PM ET (America/New_York). The Owner, EL, SA, QA, Hyg, Cost Keeper, and Prioritizer council was unanimous: stay on React Native.
+
+- **Locked:** fully native React Native. Continue the existing React Native 0.73 client in this repo.
+- **Rejected:** a hybrid WebView shell.
+- **Not binding:** a PWA or Add-to-Home-Screen page. That is a compromise only if Cos and K later consciously make SMS or email the primary wake channel. Until then it is a trial or share surface only, and never the handoff system of record.
+
+This lock does not un-park the product. Dig invents Dig OUT until Cos un-parks. Full record: [docs/CLIENT_SHELL.md](./docs/CLIENT_SHELL.md).
 
 ---
 
@@ -89,6 +99,7 @@ kidcoord/
 | [backend/README.md](./backend/README.md) | Backend guide |
 | [REGULATORY_CONSIDERATIONS.md](./docs/REGULATORY_CONSIDERATIONS.md) | Privacy and kids-PII planning notes (not legal advice) |
 | [LEGAL_IN_APP_SECTION.md](./docs/LEGAL_IN_APP_SECTION.md) | Legal UI recommendations (thin-client, server-served) |
+| [CLIENT_SHELL.md](./docs/CLIENT_SHELL.md) | Client shell lock: native React Native 0.73 |
 
 ---
 
@@ -108,6 +119,8 @@ psql kidcoord < backend/schema.sql
 ---
 
 ## 📊 Timeline
+
+The figures below are the recorded v2 estimate. They are not an un-park. Feature work stays parked until Cos un-parks.
 
 **Backend MVP:** 12-16 weeks  
 **Frontend Migration:** 3-4 weeks  

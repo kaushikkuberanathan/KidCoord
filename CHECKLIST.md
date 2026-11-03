@@ -1,9 +1,11 @@
 # KidCoord MVP Development Checklist
 
+Feature work stays parked. Open phases below are the recorded plan, not a dig. The client shell is locked to the existing native React Native 0.73 app. A hybrid WebView shell is rejected. A PWA is not the handoff system of record. See [docs/CLIENT_SHELL.md](./docs/CLIENT_SHELL.md).
+
 ## Phase 1: Foundation ✅ COMPLETE
 
 ### Project Setup
-- [x] Initialize React Native TypeScript project
+- [x] Initialize React Native TypeScript project (this is the locked client shell)
 - [x] Configure TypeScript with path aliases
 - [x] Set up ESLint and Prettier
 - [x] Configure Metro bundler

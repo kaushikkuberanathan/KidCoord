@@ -1,6 +1,6 @@
 # Legal in-app section — implementation recommendations
 
-> Companion to `docs/REGULATORY_CONSIDERATIONS.md`. Planning only — **not legal advice**. Final copy by counsel. Thin-client rule: FE presents server-served Legal payloads; no business logic in the app.
+> Companion to `docs/REGULATORY_CONSIDERATIONS.md`. Planning only — **not legal advice**. Final copy by counsel. Thin-client rule: the native app presents server-served Legal payloads; no business logic in the app. The client shell is the locked React Native 0.73 app, not a WebView or a PWA. See [CLIENT_SHELL.md](./CLIENT_SHELL.md). Feature work stays parked.
 
 ## Placement
 

@@ -14,7 +14,7 @@ KidCoord is a parent-facing coordination app for:
 2. **Evening** activity carpool — Later  
 3. **Playdate** scheduling — Later  
 
-Parents hold accounts. Children do **not** have logins in the current design; parents enter child details (typically first name + last initial, school/route/stop). Architecture intent is privacy-first, thin client (UX only), with rules/state on a middleware backend + API/events.
+Parents hold accounts. Children do **not** have logins in the current design; parents enter child details (typically first name + last initial, school/route/stop). Architecture intent is privacy-first, thin client (UX only), with rules/state on a middleware backend + API/events. The shell for that client is locked: fully native React Native 0.73. A hybrid WebView shell is rejected. A PWA is not the handoff system of record. See [CLIENT_SHELL.md](./CLIENT_SHELL.md).
 
 This document maps privacy and kids-PII regimes to that scope and records product guardrails. It does not authorize feature work.
 

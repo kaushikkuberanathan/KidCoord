@@ -2,6 +2,8 @@
 
 This guide will walk you through setting up the KidCoord mobile app development environment from scratch.
 
+The app you are setting up is the locked native React Native 0.73 client. See [docs/CLIENT_SHELL.md](./docs/CLIENT_SHELL.md). Do not set up a hybrid WebView shell or treat a PWA as the product client. Feature work stays parked.
+
 ## Table of Contents
 1. [Prerequisites](#prerequisites)
 2. [Development Environment Setup](#development-environment-setup)

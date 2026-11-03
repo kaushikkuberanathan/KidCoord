@@ -59,6 +59,9 @@ We've refined the KidCoord architecture based on the detailed solution design do
 5. **Migration Guide**: How to update existing code
 
 ### 📱 React Native App (Partial)
+
+The client shell is locked to this app: fully native React Native 0.73. A hybrid WebView shell is rejected. A PWA or Add-to-Home-Screen page is not binding. Feature work stays parked. See [CLIENT_SHELL.md](./CLIENT_SHELL.md). Cos locked this on November 2, 2026, with the Owner, EL, SA, QA, Hyg, Cost Keeper, and Prioritizer council unanimous on staying with React Native.
+
 1. **Core screens**: Morning Dashboard, Profile
 2. **Components**: Button, ChildCard (needs updating)
 3. **State management**: Zustand stores (needs updating)
@@ -310,6 +313,7 @@ Driver completes ride:
 kidcoord/
 ├── API_V2.md                    # Complete API spec (50+ endpoints)
 ├── ARCHITECTURE.md              # System design document
+├── CLIENT_SHELL.md              # Native React Native shell lock
 ├── STATE_MACHINE_TESTS.md       # Test matrix (100+ tests)
 ├── MIGRATION_GUIDE.md           # Code update guide
 ├── CHECKLIST.md                 # Development roadmap
@@ -329,6 +333,8 @@ kidcoord/
 ---
 
 ## Recommendation
+
+Feature work stays parked. The options below are the recorded migration plan. They are not an un-park. Dig invents Dig OUT until Cos un-parks. The client shell is already decided. See [CLIENT_SHELL.md](./CLIENT_SHELL.md).
 
 ### Option A: Complete Migration First (Recommended)
 1. Follow MIGRATION_GUIDE.md step-by-step
@@ -354,9 +360,9 @@ You now have:
 ✅ **Migration path** (step-by-step code update guide)  
 ✅ **Foundation code** (React Native app, needs updating)
 
-**The architecture is production-ready and scalable.** Follow the MIGRATION_GUIDE.md to align the codebase, then implement the backend per API_V2.md.
+**The architecture record includes a locked client shell** (native React Native 0.73). Feature work stays parked until Cos un-parks. See [CLIENT_SHELL.md](./CLIENT_SHELL.md).
 
-**Estimated Timeline to MVP:**
+**Estimated timeline recorded with the v2 plan:**
 - Frontend migration: 20-30 hours
 - Backend implementation: 80-120 hours
 - Testing & integration: 40-60 hours
@@ -365,9 +371,10 @@ You now have:
 ---
 
 **Questions? Start with:**
-1. QUICKSTART.md (get app running)
-2. ARCHITECTURE.md (understand system design)
-3. MIGRATION_GUIDE.md (update code)
-4. API_V2.md (implement backend)
+1. CLIENT_SHELL.md (client shell lock; feature work stays parked)
+2. QUICKSTART.md (get the native app running)
+3. ARCHITECTURE.md (understand system design)
+4. MIGRATION_GUIDE.md (recorded code-update guide)
+5. API_V2.md (API specification)
 
-**Ready to build!** 🚀
+Feature work stays parked until Cos un-parks.

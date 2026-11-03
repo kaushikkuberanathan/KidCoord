@@ -1,7 +1,8 @@
 # KidCoord Architecture Documentation
 
 **Version:** 2.0  
-**Last Updated:** February 2, 2026
+**Last Updated:** February 2, 2026  
+**Client shell:** Locked November 2, 2026. See [CLIENT_SHELL.md](./CLIENT_SHELL.md).
 
 ## Architecture Overview
 
@@ -28,8 +29,8 @@ KidCoord is built with an **event-driven, audit-first architecture** designed fo
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                     Mobile Clients                          │
-│               (iOS, Android, Mobile Web)                    │
+│               Native mobile clients (locked)                │
+│             React Native 0.73, iOS and Android              │
 └─────────────────────────────────────────────────────────────┘
                            ▼
 ┌─────────────────────────────────────────────────────────────┐
@@ -575,8 +576,12 @@ Structured JSON logs with correlation IDs:
 - **Queue**: AWS SQS or Google Pub/Sub
 - **Push**: FCM (Android) + APNs (iOS)
 
-### Frontend (React Native)
-- **Framework**: React Native 0.73
+### Frontend (React Native) — locked
+
+Cos locked this shell on November 2, 2026 (about 7:29 PM ET). The Owner, EL, SA, QA, Hyg, Cost Keeper, and Prioritizer council was unanimous on staying with React Native. Full record: [CLIENT_SHELL.md](./CLIENT_SHELL.md). Feature work stays parked.
+
+- **Shell**: Fully native React Native 0.73. Continue this client. A hybrid WebView shell is rejected.
+- **PWA / Add to Home Screen**: Not binding. Trial or share surface only, and only if Cos and K later make SMS or email the primary wake channel. Never the handoff system of record.
 - **Language**: TypeScript 5.0
 - **State**: Zustand
 - **Navigation**: React Navigation 6

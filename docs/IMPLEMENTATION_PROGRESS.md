@@ -1,7 +1,9 @@
 # KidCoord Implementation Progress
 
 **Last Updated:** February 2, 2026  
-**Status:** Foundation Complete, Backend Started
+**Status:** Foundation Complete, Backend Started  
+**Feature work:** Parked. Dig invents Dig OUT until Cos un-parks.  
+**Client shell:** Locked to native React Native 0.73. See [CLIENT_SHELL.md](./CLIENT_SHELL.md).
 
 ---
 
@@ -16,6 +18,9 @@
 - [x] Executive summary
 
 ### 2. Frontend Foundation (React Native)
+
+Cos locked this client on November 2, 2026 (about 7:29 PM ET): fully native React Native 0.73. A hybrid WebView shell is rejected. A PWA or Add-to-Home-Screen page is not the handoff system of record. See [CLIENT_SHELL.md](./CLIENT_SHELL.md). The items below record the foundation. They are not a feature dig.
+
 - [x] Project structure with TypeScript
 - [x] Domain types updated for v2 architecture
 - [x] Zustand stores (needs updating)
@@ -264,6 +269,8 @@ curl -X POST http://localhost:3000/api/v2/needs \
 
 ## 📋 Next Immediate Actions
 
+Feature work stays parked. This list is the recorded plan. It is not authorization to start a dig. The client shell is already locked.
+
 ### This Week
 1. [ ] Review backend code structure
 2. [ ] Set up local PostgreSQL database
@@ -305,6 +312,7 @@ curl -X POST http://localhost:3000/api/v2/needs \
 - `API_V2.md` - API specification
 - `STATE_MACHINE_TESTS.md` - Test matrix
 - `MIGRATION_GUIDE.md` - Frontend migration
+- `CLIENT_SHELL.md` - Native React Native client-shell lock
 - `backend/README.md` - Backend setup
 
 ### Code
@@ -332,4 +340,4 @@ curl -X POST http://localhost:3000/api/v2/needs \
 
 ---
 
-**The foundation is solid. Time to build! 🚀**
+**The foundation is recorded. Feature work stays parked until Cos un-parks. The client shell is native React Native 0.73 ([CLIENT_SHELL.md](./CLIENT_SHELL.md)).**
