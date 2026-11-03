@@ -87,6 +87,8 @@ kidcoord/
 | [ARCHITECTURE.md](./ARCHITECTURE.md) | System design |
 | [IMPLEMENTATION_PROGRESS.md](./IMPLEMENTATION_PROGRESS.md) | Roadmap & status |
 | [backend/README.md](./backend/README.md) | Backend guide |
+| [REGULATORY_CONSIDERATIONS.md](./docs/REGULATORY_CONSIDERATIONS.md) | Privacy and kids-PII planning notes (not legal advice) |
+| [LEGAL_IN_APP_SECTION.md](./docs/LEGAL_IN_APP_SECTION.md) | Legal UI recommendations (thin-client, server-served) |
 
 ---
 
