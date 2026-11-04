@@ -5,6 +5,7 @@
 
 import { ApiResponse } from '@/types/api';
 import { useAppStore } from '@/store/appStore';
+import { generateIdempotencyKey } from '@/utils/idempotency';
 
 // ============================================================================
 // CONFIGURATION
@@ -101,24 +102,33 @@ class ApiClient {
     return this.request<T>(endpoint, { method: 'GET' });
   }
 
-  async post<T>(endpoint: string, body?: any): Promise<ApiResponse<T>> {
+  async post<T>(endpoint: string, body?: any, idempotencyKey?: string): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       method: 'POST',
       body: body ? JSON.stringify(body) : undefined,
+      headers: {
+        'Idempotency-Key': idempotencyKey ?? generateIdempotencyKey(),
+      },
     });
   }
 
-  async put<T>(endpoint: string, body?: any): Promise<ApiResponse<T>> {
+  async put<T>(endpoint: string, body?: any, idempotencyKey?: string): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       method: 'PUT',
       body: body ? JSON.stringify(body) : undefined,
+      headers: {
+        'Idempotency-Key': idempotencyKey ?? generateIdempotencyKey(),
+      },
     });
   }
 
-  async patch<T>(endpoint: string, body?: any): Promise<ApiResponse<T>> {
+  async patch<T>(endpoint: string, body?: any, idempotencyKey?: string): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       method: 'PATCH',
       body: body ? JSON.stringify(body) : undefined,
+      headers: {
+        'Idempotency-Key': idempotencyKey ?? generateIdempotencyKey(),
+      },
     });
   }
 
